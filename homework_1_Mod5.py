@@ -12,14 +12,23 @@ class House:
                 print("Такого этажа не существует")
                 break
 
+    def __len__(self):
+        return self.number_of_floors
+
+    def __str__(self):
+        return (f'Название: {self.name}, кол-во этажей: {self.number_of_floors}')
+
+
 
 h1 = House('ЖК Горский', 18)
 h2 = House('Домик в деревне', 2)
+print(h1)
+print(h2)
+print(len(h1))
+print(len(h2))
 print(h1.name, h1.number_of_floors)
 print(h2.name, h2.number_of_floors)
-print('----------')
 h1.go_to(5)
-print('----------')
 h2.go_to(10)
 
 
